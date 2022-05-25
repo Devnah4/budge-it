@@ -1,0 +1,6 @@
+const router = require('express').Router()
+const { User, Monthly, Yearly, Single, Income } = require('../../models')
+
+
+
+module.exports = router
