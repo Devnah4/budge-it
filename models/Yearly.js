@@ -3,7 +3,7 @@ const sequelize = require("../config/connection");
 
 class Yearly extends Model {}
 
-Monthly.init(
+Yearly.init(
   {
     id: {
       type: DataTypes.INTEGER,
