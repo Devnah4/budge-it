@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const express = require('express');
 const sequelize = require('./config/connection')
 
@@ -11,7 +10,3 @@ app.use(express.urlencoded({ extended: true }));
 sequelize.sync({ force: false }).then(() => {
     app.listen(PORT, () => console.log('Now listening'))
 })
-=======
-
-
->>>>>>> refs/remotes/origin/main
