@@ -12,6 +12,7 @@ router.get('/', (req, res) => {
         })
 })
 
+<<<<<<< HEAD
 router.get("/:id", (req, res) => {
     // Finds a specified user
     User.findOne({
@@ -75,4 +76,6 @@ router.get("/:id", (req, res) => {
       });
   });
 
+=======
+>>>>>>> refs/remotes/origin/main
 module.exports = router
