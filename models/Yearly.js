@@ -32,7 +32,7 @@ Yearly.init(
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: "comment",
+    modelName: "yearly",
   }
 );
 
