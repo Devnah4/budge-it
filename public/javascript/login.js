@@ -19,6 +19,7 @@ async function loginFormHandler(event) {
     });
 
     if (response.ok) {
+        // Takes user to a dashboard upon succesful login
       document.location.replace("/dashboard");
     } else {
       alert(response.statusText);
@@ -26,6 +27,4 @@ async function loginFormHandler(event) {
   }
 }
 
-document
-  .querySelector(".login-form")
-  .addEventListener("submit", loginFormHandler);
+document.querySelector(".login-form").addEventListener("submit", loginFormHandler);
