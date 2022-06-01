@@ -1,7 +1,18 @@
-<h1>Welcome `{USER}`</h1>
+<h1>Welcome {{user.username}}</h1>
 <p>Below is a list of all debts</p>
 
-{{{ chart }}}
+<div class="monthly-chart">
+{{{ monthly-chart }}}
+</div>
+
+<div class="yearly-chart">
+{{{ yearly-chart }}}
+</div>
+
+<div class="singular-chart">
+{{{ singular-chart }}}
+</div>
+
 
 <button type="button" class="monthly-estimate">View Monthly estimated budget</button>
 <button type="button" class="yearly-estimate">View Yearly estimated budget</button>
