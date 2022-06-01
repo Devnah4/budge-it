@@ -27,6 +27,10 @@ Monthly.init(
         key: "id",
       },
     },
+    expense_type: {
+      type: DataTypes.STRING,
+      allowNull: false
+    }
   },
   {
     sequelize,
