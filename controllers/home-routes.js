@@ -2,9 +2,9 @@ const router = require('express').Router();
 const sequelize = require('../config/connection')
 
 // Generates the homepage
-router.get("/dashboard", (req, res) => {
+router.get("/", (req, res) => {
     // Connects to the homepage handlebars file and generates it
-    res.render('dashboard');
+    res.render('homepage');
 });
 
 module.exports = router;
