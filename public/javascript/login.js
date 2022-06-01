@@ -2,8 +2,8 @@
 async function loginFormHandler(event) {
   event.preventDefault();
     // Sets the notation for the username and password
-  const email = document.querySelector("#email-login").value.trim();
-  const password = document.querySelector("#password-login").value.trim();
+  const email = document.querySelector("#username-input-login").value.trim();
+  const password = document.querySelector("#password-input-login").value.trim();
 
    // Checks if the username and password are empty
   if (email && password) {
