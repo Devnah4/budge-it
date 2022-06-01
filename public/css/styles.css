@@ -1,0 +1,14 @@
+:root {
+    --primary: #2B2B88;
+    --secondary: #5CCAE8;
+    --tertiary: #B78A2D;
+    --quaternary: #FFE275;
+    --quinary: #CF2027;
+}
+
+header {
+    background-color: var(--primary);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
