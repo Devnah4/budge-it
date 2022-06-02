@@ -8,7 +8,7 @@ router.get("/", (req, res) => {
     // Orders the entries by the date they were created
     order: [["created_at", "DESC"]],
     // States which attributes are allowed to be pulled
-    attributes: ["id", "monthly_name", "monthly_amount"],
+    attributes: ["id", "monthly_name", "monthly_amount", "expense_type"],
     include: [
       {
         model: User,
@@ -50,6 +50,7 @@ router.post("/", (req, res) => {
   Monthly.create({
     monthly_name: req.body.monthly_amount,
     monthly_amount: req.body.monthly_amount,
+    expense_type: req.body.expense_type,
     user_id: req.body.user_id,
   })
     .then((dbPostData) => res.json(dbPostData))
@@ -65,6 +66,7 @@ router.put("/:id", (req, res) => {
       {
         monthly_name: req.body.monthly_name,
         monthly_amount: req.body.monthly_amount,
+        expense_type: req.body.expense_type,
       },
       {
         where: {
