@@ -3,6 +3,7 @@ const sequelize = require('../config/connection');
 
 // Variables for the seeds
 const seedUser = require('./user-seeds');
+const seedMonthly = require('./monthly-seeds');
 
 
 
@@ -12,6 +13,9 @@ const seedAll = async () => {
 
   await seedUser();
   console.log('\n----- USERS SEEDED -----\n');
+
+  await seedMonthly();
+  console.log('\n----- MONTHLY SEEDED -----\n');
 
   process.exit(0);
 };
