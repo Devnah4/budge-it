@@ -19,6 +19,10 @@ Single.init(
       type: DataTypes.INTEGER,
       allowNull: false,
     },
+    expense_type: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     user_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -27,10 +31,6 @@ Single.init(
         key: "id",
       },
     },
-    expense_type: {
-      type: DataTypes.STRING,
-      allowNull: false
-    }
   },
   {
     sequelize,
