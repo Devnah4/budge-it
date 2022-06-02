@@ -3,10 +3,12 @@
     <th>Name</th>
     <th>Value</th>
   </tr>
+  {{#each this}}
   <tr>
     <td>{{yearly.yearly_name}}</td>
   </tr>
   <tr>
     <td>{{yearly.yearly_amount}}</td>
   </tr>
+  {{/each}}
 </table>
