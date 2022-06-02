@@ -1,25 +1,18 @@
-<div class="card">
+<form class="login-form">
+  <div class="mb-3">
+    <label for="email-input" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="email-input" aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3">
+    <label for="password-input" class="form-label">Password</label>
+    <input type="password" class="form-control" id="password-input">
+  </div>
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="stay-logged">
+    <label class="form-check-label" for="stay-logged">Keep me signed in</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+<a href="/signup">Sign Up Instead!</a>
 
-  <h2 class="card-header">LOGIN</h2>
-
-  <form class="card-body login-form">
-
-    <div class="form-group">
-      <label class="form-label">Username:</label>
-      <input class="form-input" type="text" id="username-input-login" />
-    </div>
-
-    <div class="form-group">
-      <label class="form-label">Password:</label>
-      <input class="form-input" type="password" id="password-input-login" />
-    </div>
-
-    <div class="form-group">
-      <button class="btn btn-primary" type="submit">LOGIN</button>
-    </div>
-
-  </form>
-  <br>
-  <a href="/signup">Sign Up Instead</a>
-</div>
 <script src="/js/login.js"></script>
