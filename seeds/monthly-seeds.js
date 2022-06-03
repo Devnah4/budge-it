@@ -1,5 +1,5 @@
 // Sets the User model to be used
-const { Monthly } = require("../models/monthly");
+const { Monthly } = require("../models/Monthly");
 
 // creates an array of user data that submits to the database
 const monthlyData = [

@@ -1,5 +1,5 @@
 // Sets the User model to be used
-const { User } = require("../models/user");
+const { User } = require("../models/User");
 
 // creates an array of user data that submits to the database
 const userData = [
