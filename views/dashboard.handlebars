@@ -2,7 +2,9 @@
 <p>Below is a list of all debts</p>
 
 <div class="monthly-chart">
-{{{ monthly-chart }}}
+{{#each monthly as |monthly|}}
+{{> monthly-chart monthly}}
+{{/each}}
 </div>
 
 <div class="yearly-chart">
