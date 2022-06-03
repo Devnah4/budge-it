@@ -2,9 +2,18 @@
 <p>Below is a list of all debts</p>
 
 <div class="monthly-chart">
-{{#each monthly as |monthly|}}
-{{> monthly-chart monthly}}
-{{/each}}
+<table class="monthly-values">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Value</th>
+            <th>Type</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{> monthly-chart}}
+    </tbody>
+</table>
 </div>
 
 <div class="yearly-chart">

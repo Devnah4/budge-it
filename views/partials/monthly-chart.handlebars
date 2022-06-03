@@ -1,18 +1,9 @@
-<table class="monthly-values">
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Value</th>
-            <th>Type</th>
-        </tr>
-    </thead>
-    <tbody>
-        {{#each monthly as |monthly|}}
-        <tr>
-            <td>{{monthly.monthly_name}}</td>
-            <td>{{monthly.monthly_value}}</td>
-            <td>{{monthly.expense_type}}</td>
-        </tr>
-        {{/each}}
-    </tbody>
-</table>
+<tr>
+  {{#each Monthly.length}}
+  <li>{{monthly_name.length}} monthly_name</li>
+  <li>{{monthly_value.length}} monthly_value</li>
+  <li>{{Monthly.expense_type.length}} expense_type</li>
+  {{else}}
+  There are no values here
+  {{/each}}
+</tr>
