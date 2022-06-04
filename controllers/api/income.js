@@ -8,11 +8,10 @@ router.get("/", (req, res) => {
     // Orders the entries by the date they were created
     order: [["created_at", "DESC"]],
     // States which attributes are allowed to be pulled
-    attributes: ["id", "income_name", "income_amount"],
     include: [
       {
         model: User,
-        attributes: ["id"],
+        attributes: ["id", "username"],
       },
     ],
   })
@@ -48,8 +47,9 @@ router.get("/:id", (req, res) => {
 // Creates a income entry
 router.post("/", (req, res) => {
   Income.create({
-    income_name: req.body.income_amount,
+    income_type: req.body.income_type,
     income_amount: req.body.income_amount,
+    income_frequency: req.body.income_frequency,
     user_id: req.body.user_id,
   })
     .then((dbPostData) => res.json(dbPostData))

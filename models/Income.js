@@ -11,13 +11,17 @@ Income.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    Income_name: {
+    income_type: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    Income_amount: {
-      type: DataTypes.INTEGER,
+    income_amount: {
+      type: DataTypes.DECIMAL(10,2),
       allowNull: false,
+    },
+    income_frequency: {
+      type: DataTypes.STRING,
+      allowNull: false
     },
     user_id: {
       type: DataTypes.INTEGER,

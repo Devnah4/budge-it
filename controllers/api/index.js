@@ -2,14 +2,10 @@ const router = require('express').Router();
 
 const userRoutes = require('./user-routes');
 const incomeRoutes = require('./income');
-const monthlyRoutes = require('./monthly');
-const yearlyRoutes = require('./yearly');
-const singleRoutes = require('./single');
+const expenseRoutes = require('./expense-routes')
 
 router.use('/users', userRoutes)
 router.use('/income', incomeRoutes)
-router.use('/monthly', monthlyRoutes)
-router.use('/yearly', yearlyRoutes)
-router.use('/single', singleRoutes)
+router.use('/expense', expenseRoutes)
 
 module.exports = router

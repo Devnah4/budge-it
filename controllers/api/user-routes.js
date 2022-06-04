@@ -1,9 +1,17 @@
 const router = require('express').Router()
-const { User, Monthly, Yearly, Single, Income } = require('../../models')
+const { User, Expense, Income } = require('../../models')
 
 router.get('/', (req, res) => {
     User.findAll({
-        attributes: { exclude: ['password'] }
+        attributes: { exclude: ['password'] },
+        include: [
+          {
+            model: Income
+          },
+          {
+            model: Expense
+          }
+        ]
     })
         .then(dbUserData => res.json(dbUserData))
         .catch(err => {
@@ -17,8 +25,10 @@ router.get("/:id", (req, res) => {
     User.findOne({
       // Prevents the password from being pulled
       attributes: { exclude: ["password"] },
-    })
-      .then((dbUserData) => {
+      where: {
+        id: req.params.id
+      }
+    }).then((dbUserData) => {
         if (!dbUserData) {
           res.status(404).json({ message: "No user found with this id" });
           return;
