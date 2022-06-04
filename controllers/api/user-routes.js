@@ -51,8 +51,6 @@ router.get("/:id", (req, res) => {
   
   // POST /api/users
   router.post("/", (req, res) => {
-    // should expect {usernam: 'value', email: 'value@value.com', password: 'value'}
-    console.log(req.body);
     // Sets the information that must be put in
     User.create({
       // requires the username, email, and password
@@ -99,6 +97,16 @@ router.get("/:id", (req, res) => {
             res.json({ user: dbUserData, message: 'You are now logged in!' });
         })
     })
+})
+
+router.post('/logout', (req, res) => {
+  if (req.session.loggedIn) {
+      req.session.destroy(() => {
+          res.status(204).end()
+      })
+  } else {
+      res.status(404).end()
+  }
 })
   
   // DELETE /api/users/1

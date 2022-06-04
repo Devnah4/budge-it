@@ -12,7 +12,7 @@
 
 </head>
 
-<body class="text-center bg-secondary d-flex flex-column container-fluid min-vh-100">
+<body class="text-center bg-secondary d-flex flex-column container-fluid min-vw-100 min-vh-100">
 
 
   <header class="row bg-success">
@@ -22,32 +22,33 @@
       <li class="nav-item">
         <a class="text-light nav-link" href="/">Home</a>
       </li>      
-      <!-- Conditionally render login link with UNLESS-->
       {{#if loggedIn}}
       <li class="nav-item">
         <a class="text-light nav-link" href="/dashboard">Dashboard</a>
       </li>
+
+      {{else}}      
       <li class="nav-item">
-        <a class="text-light nav-link" href="#" id="logout">Logout</a>
+        <button id="logout" class="btn text-light">Logout</button>
       </li>
-      {{else}}
       <li class="nav-item">
         <a class="text-light nav-link" href="/login">Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="text-light nav-link" href="/signup">Sign Up</a>
       </li>
       {{/if}}
   </ul>
   </header>
 
-  <main class="row min-vh-100 min-vw-100 align-items-center text-light">
+  <main class="row min-vh-100 min-vw-100 justify-content-center align-items-center text-light">
     {{{body}}}
   </main>
 
   <footer class="row text-center mt-auto bg-success text-light">
     &copy; Budge-It 2022
   </footer>
-</body>
 
+<script src="/javascript/logout.js"></script>
+</body>
 </html>
-{{#if loggedIn}}
-<script src="/js/logout.js"></script>
-{{/if}}
