@@ -27,7 +27,15 @@ router.get("/:id", (req, res) => {
       attributes: { exclude: ["password"] },
       where: {
         id: req.params.id
-      }
+      },
+      include: [
+        {
+          model: Income
+        },
+        {
+          model: Expense
+        }
+      ]
     }).then((dbUserData) => {
         if (!dbUserData) {
           res.status(404).json({ message: "No user found with this id" });
