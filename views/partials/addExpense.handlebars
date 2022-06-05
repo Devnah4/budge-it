@@ -7,18 +7,18 @@
       </div>
       <div class="modal-body">
         <p>Enter the name, amount, type, and frequency of this expense.</p>
-        <form id="incomeForm">
+        <form id="addExpenseForm">
             <div class="input-group mb-3">
                 <span class="input-group-text" id="exNameLabel">Name</span> 
-                <input type="text" class="form-control" id="expenseName" placeholder="Enter a name for this expense" aria-label="Enter a name for this expense" aria-describedby="exNameLabel">
+                <input type="text" class="form-control" name="expenseName" id="expenseName" placeholder="Enter a name for this expense" aria-label="Enter a name for this expense" aria-describedby="exNameLabel">
             </div>
             <div class="input-group mb-3">
                 <span class="input-group-text" id="exLabel">$</span> 
-                <input type="text" class="form-control" id="expenseAmount" placeholder="Amount" aria-label="Amount" aria-describedby="exlabel">
+                <input type="text" class="form-control" name="expenseAmount" id="expenseAmount" placeholder="Amount" aria-label="Amount" aria-describedby="exlabel">
             </div>
             <div class="input-group mb-3">
                 <label class="income-group-text" for="incomeType" >Type</label>
-                <select class="form-select" id="incomeType">
+                <select class="form-select" name="expenseType" id="expenseType">
                     <option value="Groceries">Groceries</option>
                     <option value="Housing">Housing</option>
                     <option value="Utilities">Utilities</option>
@@ -29,19 +29,18 @@
             </div>
             <div class="input-group mb-3">
                 <label class="income-group-text" for="expenseFrequency">Frequency</label>
-                <select class="form-select" id="expenseFrequency">
+                <select class="form-select" name="expenseFrequency" id="expenseFrequency">
                     <option value="Single">Single</option>
                     <option value="Weekly">Weekly</option>
                     <option value="Monthly">Monthly</option>
                     <option value="Yearly">Yearly</option>
                 </select>
             </div>
+        <button type="submit" class="btn btn-primary">Add Expense</button>
         </form>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" id="addExpenseBtn" class="btn btn-primary">Add Expense</button>
-      </div>
+      
     </div>
   </div>
 </div>
+
