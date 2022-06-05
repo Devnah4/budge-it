@@ -19,8 +19,11 @@ async function loginFormHandler(event) {
     });
 
     if (response.ok) {
-        // Takes user to a dashboard upon succesful login
-      document.location.replace("/dashboard");
+      setTimeout(() => {
+      // Takes user to a dashboard upon succesful login
+      document.location.replace("/dashboard");  
+      }, 500)
+
     } else {
       alert(response.statusText);
     }
