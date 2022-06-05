@@ -1,0 +1,47 @@
+<div class="modal fade text-dark" id="expenseForm" tabindex="-1" aria-labelledby="expenseHeader" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="expenseHeader">Add an expense:</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Enter the name, amount, type, and frequency of this expense.</p>
+        <form id="incomeForm">
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="exNameLabel">Name</span> 
+                <input type="text" class="form-control" id="expenseName" placeholder="Enter a name for this expense" aria-label="Enter a name for this expense" aria-describedby="exNameLabel">
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="exLabel">$</span> 
+                <input type="text" class="form-control" id="expenseAmount" placeholder="Amount" aria-label="Amount" aria-describedby="exlabel">
+            </div>
+            <div class="input-group mb-3">
+                <label class="income-group-text" for="incomeType" >Type</label>
+                <select class="form-select" id="incomeType">
+                    <option value="Groceries">Groceries</option>
+                    <option value="Housing">Housing</option>
+                    <option value="Utilities">Utilities</option>
+                    <option value="Dining">Dining</option>
+                    <option value="Recreation">Recreation</option>
+                    <option value="Health/Wellness">Health/Wellness</option>
+                </select>
+            </div>
+            <div class="input-group mb-3">
+                <label class="income-group-text" for="expenseFrequency">Frequency</label>
+                <select class="form-select" id="expenseFrequency">
+                    <option value="Single">Single</option>
+                    <option value="Weekly">Weekly</option>
+                    <option value="Monthly">Monthly</option>
+                    <option value="Yearly">Yearly</option>
+                </select>
+            </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" id="addExpenseBtn" class="btn btn-primary">Add Expense</button>
+      </div>
+    </div>
+  </div>
+</div>

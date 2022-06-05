@@ -1,0 +1,40 @@
+<div class="modal fade text-dark" id="incomeForm" tabindex="-1" aria-labelledby="incomeHeader" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="incomeHeader">Add a source of income:</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Enter the amount, source, and frequency of this income.</p>
+        <form id="incomeForm">
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="icLabel">$</span> 
+                <input type="text" class="form-control" id="incomeAmount" placeholder="Amount" aria-label="Amount" aria-describedby="iclabel">
+            </div>
+            <div class="input-group mb-3">
+                <label class="income-group-text" for="incomeSource" >Source</label>
+                <select class="form-select" id="incomeSource">
+                    <option value="Work">Work</option>
+                    <option value="Passive">Passive</option>
+                    <option value="Stock/Crypto">Stock/Crypto</option>
+                </select>
+            </div>
+            <div class="input-group mb-3">
+                <label class="income-group-text" for="incomeFrequency" >Frequency</label>
+                <select class="form-select" id="incomeFrequency">
+                    <option value="Single">Single</option>
+                    <option value="Weekly">Weekly</option>
+                    <option value="Monthly">Monthly</option>
+                    <option value="Yearly">Yearly</option>
+                </select>
+            </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" id="addIncomeBtn" class="btn btn-primary">Add Income</button>
+      </div>
+    </div>
+  </div>
+</div>

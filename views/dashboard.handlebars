@@ -1,8 +1,11 @@
 {{#with budget}}
 <div class="d-flex justify-content-around">
-    <button id="addIncome" class="btn btn-success fs-1">Add An Income</button>
-    <button id="addExpense" class="btn btn-success fs-1">Add An Expense</button>
+    <button id="addIncome" class="btn btn-success fs-1" data-bs-toggle="modal" data-bs-target="#incomeForm">Add An Income</button>
+    <button id="addExpense" class="btn btn-success fs-1" data-bs-toggle="modal" data-bs-target="#expenseForm">Add An Expense</button>
 </div>
+
+{{> addIncome}}
+{{> addExpense}}
 
 <h1>{{username}}'s Dashboard</h1>
 
