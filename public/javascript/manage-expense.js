@@ -26,7 +26,6 @@ async function newExpenseHandler(event) {
         document.location.reload()
     } else {
         alert(response.statusText);
-        console.log(user_id)
     }
 }
 
