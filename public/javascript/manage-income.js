@@ -1,12 +1,12 @@
 async function newIncomeHandler(event) {
     event.preventDefault()
 
-    const income_type = document.querySelector('#incomeType').value
+    const income_type = document.querySelector('#incomeSource').value
     const income_frequency = document.querySelector('#incomeFrequency').value
     const income_amount = document.querySelector('#incomeAmount').value
-    const user_id = document.querySelector('#userId').textContent
+    const user_id = document.querySelector('#userID').textContent
 
-    const response = await fetch('api/income', {
+    const response = await fetch('/api/income', {
         method: 'POST',
         body: JSON.stringify({
             income_type,
