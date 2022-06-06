@@ -1,10 +1,12 @@
 async function newExpenseHandler(event) {
     event.preventDefault()
 
-    const expense_name = document.querySelector('input[name="expenseName"]').value
-    const expense_type = document.querySelector('input[name="expenseType"]').value
-    const expense_frequency = document.querySelector('input[name="expenseFrequency"]').value
-    const expense_amount = document.querySelector('input[name="expenseAmount"]').value
+    const expense_name = document.querySelector('#expenseName').value
+    const expense_type = document.querySelector('#expenseType').value
+    const expense_frequency = document.querySelector('#expenseFrequency').value
+    const expense_amount = document.querySelector('#expenseAmount').value
+    const user_id = document.querySelector('#userID').textContent
+    
 
     const response = await fetch('/api/expense', {
         method: 'POST',
@@ -12,7 +14,8 @@ async function newExpenseHandler(event) {
             expense_name,
             expense_type,
             expense_frequency,
-            expense_amount
+            expense_amount,
+            user_id
         }),
         headers: {
             'Content-Type': 'application/json'
@@ -20,10 +23,11 @@ async function newExpenseHandler(event) {
     })
 
     if (response.ok) {
-        document.location.reload
+        document.location.reload()
     } else {
         alert(response.statusText);
+        console.log(user_id)
     }
 }
 
-document.querySelector('.addExpenseForm').addEventListener('click', newExpenseHandler)
+document.querySelector('#addExpenseForm').addEventListener('submit', newExpenseHandler)
