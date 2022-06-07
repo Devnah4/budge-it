@@ -16,7 +16,10 @@ async function signupFormHandler(event) {
             headers: { 'Content-Type': 'application/json' }
         });
         if (response.ok) {
-            console.log('success');
+            setTimeout(() => {
+                // Takes user to a dashboard upon succesful login
+                document.location.replace("/dashboard");  
+                }, 500)
         } else {
             alert(response.statusText);
         }
