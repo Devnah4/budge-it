@@ -1,0 +1,66 @@
+<div class="modal fade text-dark" id="manageExpenseForm" tabindex="-1" aria-labelledby="manageExpenseHeader" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="manageExpenseHeader">Manage Expenses:</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+          <h2>Edit Expense</h2>
+        <form id="editExpenseForm">
+            <div class="input-group mb-3">
+                <label class="input-group-text" for="editExpenseChoices">Choose Expense</label>
+                <select class="form-select" name="editExpenseChoices" id="editExpenseChoices">
+                    {{#each expenses}}
+                        <option value="{{id}}">{{expense_name}}</option>
+                    {{/each}}
+                </select>
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="editExNameLabel">Name</span> 
+                <input type="text" class="form-control" name="editExpenseName" id="editExpenseName" placeholder="Enter a name for this expense" aria-label="Enter a name for this expense" aria-describedby="editExNameLabel">
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="editExLabel">$</span> 
+                <input type="text" class="form-control" name="editExpenseAmount" id="editExpenseAmount" placeholder="Amount" aria-label="Amount" aria-describedby="editExlabel">
+            </div>
+            <div class="input-group mb-3">
+                <label class="income-group-text" for="editExpenseType" >Type</label>
+                <select class="form-select" name="editExpenseType" id="editExpenseType">
+                    <option value="Groceries">Groceries</option>
+                    <option value="Housing">Housing</option>
+                    <option value="Utilities">Utilities</option>
+                    <option value="Dining">Dining</option>
+                    <option value="Recreation">Recreation</option>
+                    <option value="Health/Wellness">Health/Wellness</option>
+                </select>
+            </div>
+            <div class="input-group mb-3">
+                <label class="income-group-text" for="editExpenseFrequency">Frequency</label>
+                <select class="form-select" name="editExpenseFrequency" id="editExpenseFrequency">
+                    <option value="Single">Single</option>
+                    <option value="Weekly">Weekly</option>
+                    <option value="Monthly">Monthly</option>
+                    <option value="Yearly">Yearly</option>
+                </select>
+            </div>         
+            <button type="submit" class="btn btn-primary">Edit Expense</button> 
+        </form>
+        <h2>Delete Expense</h2>
+        <form id="deleteExpenseForm">
+            <div class="input-group mb-3">
+                <label class="input-group-text" for="deleteExpenseChoices">Choose Expense</label>
+                <select class="form-select" name="deleteExpenseChoices" id="deleteExpenseChoices">
+                    {{#each expenses}}
+                        <option value="{{id}}">{{expense_name}}</option>
+                    {{/each}}
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Delete Expense</button>
+        </form>
+      </div>
+      
+    </div>
+  </div>
+</div>
+

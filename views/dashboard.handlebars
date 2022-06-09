@@ -4,8 +4,16 @@
     <button id="addExpense" class="btn btn-success fs-1" data-bs-toggle="modal" data-bs-target="#expenseForm">Add An Expense</button>
 </div>
 
+<div class="d-flex justify-content-around">
+    <button id="manageIncome" class="btn btn-success fs-1" data-bs-toggle="modal" data-bs-target="#manageIncomeForm">Manage Incomes</button>
+    <button id="manageExpense" class="btn btn-success fs-1" data-bs-toggle="modal" data-bs-target="#manageExpenseForm">Manage Expenses</button>
+</div>
+
 {{> addIncome}}
 {{> addExpense}}
+{{> manageIncome}}
+{{> manageExpense}}
+
 <div class="d-none" id="userID">{{id}}</div>
 
 <h1>{{username}}'s Dashboard</h1>
