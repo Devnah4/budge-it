@@ -56,7 +56,9 @@ router.put('/:id', (req, res) => {
     Expense.update(
         {
             expense_name: req.body.expense_name,
-            expense_amount: req.body.expense_amount
+            expense_amount: req.body.expense_amount,
+            expense_type: req.body.expense_type,
+            expense_frequency: req.body.expense_frequency
         },
         {
             where: {
