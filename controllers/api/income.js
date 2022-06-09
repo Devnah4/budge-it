@@ -63,8 +63,9 @@ router.post("/", (req, res) => {
 router.put("/:id", (req, res) => {
     Income.update(
       {
-        income_name: req.body.income_name,
+        income_type: req.body.income_type,
         income_amount: req.body.income_amount,
+        income_frequency: req.body.income_frequency
       },
       {
         where: {
