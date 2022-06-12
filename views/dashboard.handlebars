@@ -3,12 +3,20 @@
 
 <div class="d-flex justify-content-around">
     <button id="addIncome" class="btn btn-success fs-1" data-bs-toggle="modal" data-bs-target="#incomeForm">Add An Income</button>
-    <button id="addExpense" class="btn btn-success fs-1" data-bs-toggle="modal" data-bs-target="#expenseForm">Add An Expense</button>
+    <button id="addExpense" class="btn btn-danger fs-1" data-bs-toggle="modal" data-bs-target="#expenseForm">Add An Expense</button>
 </div>
 
 <div class="d-flex justify-content-around">
     <button id="manageIncome" class="btn btn-success fs-1" data-bs-toggle="modal" data-bs-target="#manageIncomeForm">Manage Incomes</button>
-    <button id="manageExpense" class="btn btn-success fs-1" data-bs-toggle="modal" data-bs-target="#manageExpenseForm">Manage Expenses</button>
+    <button id="manageExpense" class="btn btn-danger fs-1" data-bs-toggle="modal" data-bs-target="#manageExpenseForm">Manage Expenses</button>
+</div>
+
+<h2 class="border-bottom">Totals</h2>
+
+<div class="d-flex justify-content-around">
+    <h3 id="incomeTotal"></h3>
+    <p class="fs-2" id="budgetStatus"></p>
+    <h3 id="expenseTotal"></h3>
 </div>
 
 {{> addIncome}}
@@ -19,7 +27,7 @@
 <div class="d-none" id="userID">{{id}}</div>
 
 <h2 class="border-bottom">Incomes</h2>
-<table class="table table-striped table-hover table-success">
+<table id="incomeTable" class="table table-striped table-hover table-success">
     <thead>
         <tr>
             <th scope="col">Type</th>
@@ -39,7 +47,7 @@
 </table>
 
 <h2 class="border-bottom">Expenses</h2>
-<table class="table table-striped table-hover table-success">
+<table id="expenseTable" class="table table-striped table-hover table-danger">
     <thead>
         <tr>
             <th scope="col">Expense</th>
@@ -62,4 +70,5 @@
 {{/with}}
 <script src="/javascript/manage-expense.js"></script>
 <script src="/javascript/manage-income.js"></script>
+<script src="/javascript/totals.js"></script>
 
