@@ -1,13 +1,19 @@
 <div class="modal fade text-dark" id="manageIncomeForm" tabindex="-1" aria-labelledby="manageIncomeHeader" aria-hidden="true">
+  
   <div class="modal-dialog">
+
     <div class="modal-content">
+
       <div class="modal-header">
         <h5 class="modal-title" id="manageIncomeHeader">Manage Income:</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
+
       <div class="modal-body">
         <form id="editIncomeForm">
+
             <h2>Edit Income</h2>
+
             <div class="input-group mb-3">
                 <label class="input-group-text" for="editIncomeChoices">Choose Income</label>
                 <select class="form-select" name="editIncomeChoices" id="editIncomeChoices">
@@ -16,20 +22,23 @@
                     {{/each}}
                 </select>
             </div>
+            
             <div class="input-group mb-3">
                 <span class="input-group-text" id="editIncomeLabel">$</span> 
                 <input type="text" class="form-control" id="editIncomeAmount" placeholder="Amount" aria-label="Amount" aria-describedby="editIncomelabel">
             </div>
+
             <div class="input-group mb-3">
-                <label class="income-group-text" for="editIncomeSource">Source</label>
-                <select class="form-select" id="editIncomeSource">
+                <label class="input-group-text" for="editIncomeSource">Source</label>
+                <select class="form-select" name="editIncomeSource"  id="editIncomeSource">
                     <option value="Work">Work</option>
                     <option value="Passive">Passive</option>
                     <option value="Stock/Crypto">Stock/Crypto</option>
                 </select>
             </div>
+
             <div class="input-group mb-3">
-                <label class="income-group-text" for="editIncomeFrequency">Frequency</label>
+                <label class="input-group-text" for="editIncomeFrequency">Frequency</label>
                 <select class="form-select" id="editIncomeFrequency">
                     <option value="Single">Single</option>
                     <option value="Weekly">Weekly</option>
@@ -37,10 +46,15 @@
                     <option value="Yearly">Yearly</option>
                 </select>
             </div>
+
             <button type="submit" class="btn btn-primary">Edit Income</button>
         </form>
+
+
         <h2>Delete Income</h2>
+
         <form id="deleteIncomeForm">
+
             <div class="input-group mb-3">
                 <label class="input-group-text" for="deleteIncomeChoices">Choose Income</label>
                 <select class="form-select" name="deleteIncomeChoices" id="deleteIncomeChoices">
@@ -49,10 +63,10 @@
                     {{/each}}
                 </select>
             </div>
+
             <button type="submit" class="btn btn-danger">Delete Income</button>
         </form>
       </div>
-      
     </div>
   </div>
 </div>
