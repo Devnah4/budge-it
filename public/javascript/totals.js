@@ -1,9 +1,10 @@
 const incomeTable = document.getElementById("incomeTable")
 const expenseTable = document.getElementById("expenseTable")
 
-let incomeTypeVal;
-let expenseTypeVal;
+// Income Type Value
+let incomeTypeVal
 
+// Total Values
 let incomeTotalVal = 0
 let expenseTotalVal = 0
 
@@ -26,7 +27,7 @@ for (let i = 1; i < incomeTable.rows.length; i++) {
             break;
     }
     incomeTotalVal = incomeTotalVal + currentIncomeVal
-}
+  }
 
 // Expense Total
 for (let i = 1; i < expenseTable.rows.length; i++) {
@@ -54,9 +55,11 @@ const incomeTotalDisplay = document.getElementById("incomeTotal")
 const expenseTotalDisplay = document.getElementById("expenseTotal")
 const budgetStatusDisplay = document.getElementById("budgetStatus")
 
+// Total Display Text
 incomeTotalDisplay.innerHTML = "Total Income = $" + incomeTotalVal;
 expenseTotalDisplay.innerHTML = "Total Expenses = $" + expenseTotalVal;
 
+// Color Code Budget
 if (incomeTotalVal < expenseTotalVal) {
     incomeTotalDisplay.classList.add("text-danger")
     expenseTotalDisplay.classList.add("text-danger")
